@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                if viewModel.myConcepts.concept.isEmpty {
+                    Text("Add concepts you want to learn")
+                        .padding(.top, 50)
+                        .foregroundColor(.gray)
+                } else {
+                    ForEach(viewModel.myConcepts.concept, id: \.self) { concept in
+                        Text(concept)
+                    }
+                }
+            }
         }
         .padding()
     }
