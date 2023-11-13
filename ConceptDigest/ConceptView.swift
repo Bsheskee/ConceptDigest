@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ConceptView: View {
     let concept: Concept
-    
+    @State private var showAddConcept = false
+
     var body: some View {
         VStack {
             Text(concept.name)
@@ -18,6 +19,14 @@ struct ConceptView: View {
             Text(concept.meaning)
                 .font(.title)
             Spacer()
+                .sheet(isPresented: $showAddConcept) {
+                    AddConceptView()
+                }
+                .toolbar {
+                    Button(action: { showAddConcept.toggle()}) {
+                        Image(systemName: "plus").font(.title).tint(.black)
+                    }
+                }
         }
         .padding()
     }

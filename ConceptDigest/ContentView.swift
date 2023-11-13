@@ -12,7 +12,7 @@ import SwiftUI
 struct ContentView: View {
 //    @StateObject private var viewModel = ViewModel()
     @State private var showAddConcept = false
-    @StateObject private var myConcepts = ConceptStore()
+    @EnvironmentObject private var myConcepts: ConceptStore
     
     var body: some View {
         NavigationView {
@@ -30,7 +30,7 @@ struct ContentView: View {
                 Spacer()
             } //bind childview $changes to update the @parent
             .sheet(isPresented: $showAddConcept) {
-                AddConceptView(someConcepts: myConcepts)
+                AddConceptView()
             }
             .navigationTitle("Concepts")
             .navigationBarTitleDisplayMode(.automatic)
@@ -47,5 +47,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ConceptStore())
     }
 }
+//TODO: One- TextField should return
