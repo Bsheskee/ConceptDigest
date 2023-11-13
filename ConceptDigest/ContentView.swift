@@ -7,20 +7,36 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject private var viewModel = ViewModel()
 
+
+struct ContentView: View {
+//    @StateObject private var viewModel = ViewModel()
+    @State private var showAddConcept = false
+    @StateObject private var myConcepts = ConceptStore()
+    
     var body: some View {
         NavigationView {
             VStack {
-                if viewModel.myConcepts.concept.isEmpty {
+                if myConcepts.concepts.isEmpty {
                     Text("Add concepts you want to learn")
                         .padding(.top, 50)
                         .foregroundColor(.gray)
-                } else {
-                    ForEach(viewModel.myConcepts.concept, id: \.self) { concept in
-                        Text(concept)
+                }
+                ForEach(myConcepts.concepts) { concept in
+                    NavigationLink(destination: ConceptView(concept: concept)) {
+                        Text(concept.name)
                     }
+                }
+                Spacer()
+            } //bind childview $changes to update the @parent
+            .sheet(isPresented: $showAddConcept) {
+                AddConceptView(someConcepts: myConcepts)
+            }
+            .navigationTitle("Concepts")
+            .navigationBarTitleDisplayMode(.automatic)
+            .toolbar {
+                Button(action: { showAddConcept.toggle()}) {
+                    Image(systemName: "plus").font(.title).tint(.black)
                 }
             }
         }

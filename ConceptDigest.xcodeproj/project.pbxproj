@@ -14,6 +14,7 @@
 		CE0976FF2B0123C000A3E47F /* AddConceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0976FE2B0123C000A3E47F /* AddConceptView.swift */; };
 		CE0977032B0171A500A3E47F /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0977022B0171A400A3E47F /* ContentView-ViewModel.swift */; };
 		CE0977052B0172AB00A3E47F /* ConceptStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0977042B0172AB00A3E47F /* ConceptStoreModel.swift */; };
+		CE48EAD12B029EA800AAAF4C /* ConceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48EAD02B029EA800AAAF4C /* ConceptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CE0976FE2B0123C000A3E47F /* AddConceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConceptView.swift; sourceTree = "<group>"; };
 		CE0977022B0171A400A3E47F /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		CE0977042B0172AB00A3E47F /* ConceptStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptStoreModel.swift; sourceTree = "<group>"; };
+		CE48EAD02B029EA800AAAF4C /* ConceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 				CE0976F02B0121DF00A3E47F /* ConceptDigestApp.swift */,
 				CE0976F22B0121DF00A3E47F /* ContentView.swift */,
 				CE0977042B0172AB00A3E47F /* ConceptStoreModel.swift */,
+				CE0976FE2B0123C000A3E47F /* AddConceptView.swift */,
+				CE48EAD02B029EA800AAAF4C /* ConceptView.swift */,
 				CE0977022B0171A400A3E47F /* ContentView-ViewModel.swift */,
 				CE0976F42B0121E000A3E47F /* Assets.xcassets */,
 				CE0976F62B0121E000A3E47F /* Preview Content */,
-				CE0976FE2B0123C000A3E47F /* AddConceptView.swift */,
 			);
 			path = ConceptDigest;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0976FF2B0123C000A3E47F /* AddConceptView.swift in Sources */,
+				CE48EAD12B029EA800AAAF4C /* ConceptView.swift in Sources */,
 				CE0977032B0171A500A3E47F /* ContentView-ViewModel.swift in Sources */,
 				CE0976F32B0121DF00A3E47F /* ContentView.swift in Sources */,
 				CE0977052B0172AB00A3E47F /* ConceptStoreModel.swift in Sources */,
