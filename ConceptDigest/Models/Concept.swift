@@ -7,10 +7,6 @@
 
 import Foundation
 
-final class ConceptStore: ObservableObject {
-    @Published var concepts: [Concept] = []
-}
-
 struct Concept: Identifiable {
     let id = UUID()
     let name: String

@@ -22,11 +22,11 @@ struct ConceptDetailView: View {
                 .sheet(isPresented: $showAddConcept) {
                     AddConceptView()
                 }
-                .toolbar {
-                    Button(action: { showAddConcept.toggle()}) {
-                        Image(systemName: "plus").font(.title).tint(.black)
-                    }
-                }
+        }
+        .toolbar {
+            Button(action: { showAddConcept.toggle()}) {
+                Image(systemName: "plus").font(.title).tint(.black)
+            }
         }
         .padding()
     }

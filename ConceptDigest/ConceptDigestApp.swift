@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ConceptDigestApp: App {
-    @StateObject private var store = ConceptStore()
+    @StateObject private var store = ConceptsManager()
     var body: some Scene {
         WindowGroup {
             ConceptsView()
