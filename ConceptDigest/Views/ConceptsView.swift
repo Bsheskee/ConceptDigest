@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct ContentView: View {
+struct ConceptsView: View {
 //    @StateObject private var viewModel = ViewModel()
     @State private var showAddConcept = false
     @EnvironmentObject private var myConcepts: ConceptStore
@@ -23,7 +23,7 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                 }
                 ForEach(myConcepts.concepts) { concept in
-                    NavigationLink(destination: ConceptView(concept: concept)) {
+                    NavigationLink(destination: ConceptDetailView(concept: concept)) {
                         Text(concept.name)
                     }
                 }
@@ -46,7 +46,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ConceptsView()
             .environmentObject(ConceptStore())
     }
 }

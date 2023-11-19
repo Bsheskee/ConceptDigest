@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConceptView: View {
+struct ConceptDetailView: View {
     let concept: Concept
     @State private var showAddConcept = false
 
@@ -34,6 +34,6 @@ struct ConceptView: View {
 
 struct ConceptView_Previews: PreviewProvider {
     static var previews: some View {
-        ConceptView(concept: Concept(name: "Concept to learn", meaning: "Concept I want to learn"))
+        ConceptDetailView(concept: Concept(name: "Concept to learn", meaning: "Concept I want to learn"))
     }
 }

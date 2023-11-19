@@ -12,7 +12,7 @@ struct ConceptDigestApp: App {
     @StateObject private var store = ConceptStore()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConceptsView()
                 .environmentObject(store)
         }
     }
