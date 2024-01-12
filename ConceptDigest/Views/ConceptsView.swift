@@ -8,10 +8,9 @@
 import SwiftUI
 
 
-
 struct ConceptsView: View {
     @State private var showAddConcept = false
-    @EnvironmentObject private var myConcepts: ConceptsManager
+    @EnvironmentObject private var myConcepts: ConceptsViewModel
     
     var body: some View {
         NavigationView {
@@ -33,7 +32,7 @@ struct ConceptsView: View {
                 }
             }
             
-            //bind childview $changes to update the @parent
+            ///bind childview $changes to update the @parent
             .sheet(isPresented: $showAddConcept) {
                 AddConceptView()
             }
@@ -47,7 +46,6 @@ struct ConceptsView: View {
                                 Image(systemName: "plus").font(.title).tint(.black)
                             }
                         }
-                
             }
         }
     }
@@ -56,7 +54,7 @@ struct ConceptsView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ConceptsView()
-            .environmentObject(ConceptsManager())
+            .environmentObject(ConceptsViewModel())
     }
 }
 //TODO: One- TextField should return

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddConceptView: View {
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var someConcepts: ConceptsManager
+    @EnvironmentObject var someConcepts: ConceptsViewModel
     @State private var name = ""
     @State private var meaning = ""
 
@@ -39,6 +39,6 @@ struct AddConceptView: View {
 struct AddConceptView_Previews: PreviewProvider {
     static var previews: some View {
         AddConceptView()
-            .environmentObject(ConceptsManager())
+            .environmentObject(ConceptsViewModel())
     }
 }
